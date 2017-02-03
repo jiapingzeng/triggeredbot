@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
     res.send("Hello!")
 })
 
-app.get('/webhook', (req, res) => {
+app.get('/webhook', function(req, res) {
     if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === 'this_is_a_secure_token') {
         console.log('Validating webhook')
         res.status(200).send(req.query['hub.challenge'])
@@ -16,13 +16,13 @@ app.get('/webhook', (req, res) => {
     }
 })
 
-app.post('/webhook', (req, res) => {
+app.post('/webhook', function(req, res) {
     var data = req.body
     if (data.object === 'page') {
-        data.entry.forEach((entry) => {
+        data.entry.forEach(function(entry) {
             var pageId = entry.id;
             var time = entry.time
-            entry.messaging.forEach((event) => {
+            entry.messaging.forEach(function(event) {
                 if (event.message) {
                     receivedMessage(event)
                 } else {
@@ -78,7 +78,7 @@ function callSendAPI(messageData) {
         qs: { access_token: 'EAAWnZBcQDeeoBAMKQGvwMQXFidBK3QzLdLFiS9XQjYyO4xJFqYgJanJd1Sk8x4z8zrQrnVbwNIkNwsD6NNHHcXp883YaIpFNBrBL65cN7rIrizwOpwLZAgzpCVSshmY0psYqJy1kxYNE6qFt9hVnkA8ifgbA2vvy3sOJfiZBAZDZD'},
         method: 'POST',
         json: messageData
-    }, (err, res, body) => {
+    }, function(err, res, body) {
         if (!err && res.statusCode == 200) {
             var recipientId = body.recipient_id;
             var messageId = body.message_id;
@@ -90,7 +90,7 @@ function callSendAPI(messageData) {
     })
 }
 
-app.use((err, req, res, next) => {
+app.use(function(err, req, res, next) {
     console.log(err)
     res.status(403).send("Oh no!")
 })
