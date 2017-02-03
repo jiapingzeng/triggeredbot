@@ -163,11 +163,11 @@ function sendGenericMessage(recipientId, messageText) {
 
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
-    recipient: {
-      id: recipientId
+    "recipient": {
+      "id": recipientId
     },
-    message: {
-      text: messageText
+    "message": {
+      "text": messageText
     }
   };
 
