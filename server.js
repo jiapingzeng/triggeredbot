@@ -75,7 +75,7 @@ function sendWelcomeMessage(recipientId, messageText) {
             id: recipientId
         },
         message: {
-            text: 'Hello! My name is Trigg EredBot. Please excuse me if I say anything dumb.'
+            text: 'Hello! My name is Trigg EredBot. Please excuse me if I sound like an idiot.'
         }
     }
     callSendAPI(messageData);
