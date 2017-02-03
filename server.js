@@ -28,8 +28,8 @@ app.post('/webhook', function(req, res) {
                 } else {
                     console.log('uh-oh');
                 }
-            })
-        })
+            });
+        });
     }
     res.sendStatus(200);
 });
@@ -77,7 +77,7 @@ function sendTextMessage(recipientId, messageText) {
 }
 
 function callSendAPI(messageData) {
-    requestAnimationFrame({
+    request({
         uri: 'https://graph.facebook.com/v2.6/me/messages',
         qs: { access_token: 'EAAWnZBcQDeeoBAH13nrTZAGHpGQzdXFZBWgBNq6OORCLTmQhUKKB9rOiGrhjTHPzAjnjPw2ZAVew0gqbx648pZCssrJJTvm11VZAjZCiOPXpjd4vkyRVsfGKgym6Kk71joxDM3oNGeWmg1zyYNEwFNSRi42agStBHyWnwKuS2YGlQZDZD'},
         method: 'POST',
@@ -90,7 +90,7 @@ function callSendAPI(messageData) {
         } else {
             console.log(':(');
         }
-    })
+    });
 }
 
 app.listen(port);
