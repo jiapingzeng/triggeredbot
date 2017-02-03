@@ -55,9 +55,11 @@ function receivedMessage(event) {
     var messageAttachments = message.attachments;
 
     if (messageText) {
-        switch (messageText) {
-            case 'generic':
-                sendGenericMessage(senderId);
+        switch (messageText.toLowerCase()) {
+            case 'hi':
+            case 'hello':
+            case 'hey':
+                sendWelcomeMessage(senderId);
                 break;
             default:
                 sendTextMessage(senderId, messageText);
@@ -67,8 +69,16 @@ function receivedMessage(event) {
     }
 }
 
-function sendGenericMessage(recipientId, messageText) {
-    console.log('Sending generic message');
+function sendWelcomeMessage(recipientId, messageText) {
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            text: 'Hello! My name is Trigg EredBot. Please excuse me if I say anything dumb.'
+        }
+    }
+    callSendAPI(messageData);
 }
 
 function sendTextMessage(recipientId, messageText) {
