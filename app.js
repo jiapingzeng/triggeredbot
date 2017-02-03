@@ -11,8 +11,7 @@ app.get('/webhook', function(req, res) {
         console.log('Validating webhook')
         res.status(200).send(req.query['hub.challenge'])
     } else {
-        console.error('Validation failed')
-        throw new Error('oops')
+        console.log('Validation failed')
     }
 })
 
@@ -26,7 +25,7 @@ app.post('/webhook', function(req, res) {
                 if (event.message) {
                     receivedMessage(event)
                 } else {
-                    throw new Error('uh-oh')
+                    console.log('uh-oh')
                 }
             })
         })
@@ -85,14 +84,9 @@ function callSendAPI(messageData) {
 
             console.log("Message with id ${messageId} sent to recipient ${recipientId}")
         } else {
-            throw new Error(':(')
+            console.log(':(')
         }
     })
 }
-
-app.use(function(err, req, res, next) {
-    console.log(err)
-    res.status(403).send("Oh no!")
-})
 
 app.listen(port)
