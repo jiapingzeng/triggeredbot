@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "publish": "npm install",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "author": {
     "name": "jiapingzeng",
