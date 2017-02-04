@@ -68,8 +68,8 @@ function sendTextMessage(recipientId, messageText) {
             text: messageText
         }
     }
-    console.log('sending "' + messageText + '"')
-    //callSendAPI(messageData)
+    //console.log('sending "' + messageText + '"')
+    callSendAPI(messageData)
 }
 
 function callSendAPI(messageData) {
