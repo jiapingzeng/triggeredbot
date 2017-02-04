@@ -44,7 +44,6 @@ app.post('/webhook', function(req, res) {
 
 function receivedMessage(event) {
     var senderId = event.sender.id
-    var recipientId = event.recipient.id
     var timestamp = event.timestamp
     var message = event.message
 
@@ -68,7 +67,7 @@ function sendTextMessage(recipientId, messageText) {
             text: messageText
         }
     }
-    //console.log('sending "' + messageText + '"')
+    console.log('sending "' + messageText + '"')
     callSendAPI(messageData)
 }
 

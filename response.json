@@ -1,12 +1,15 @@
 {
-    "welcome": [
+    "greeting": [
         "Hello! My name is Trigg EredBot. I'm currently tilted.",
         "Hey there!",
         "Yo!",
-        "'Sup monica!",
-        "Greetings, my name is 6@0989AUEIJE or Trigg Ered Bot.",
-        "Salutations!",
-        "Yo, yo, yo... It's yo dog da Trigg Ered F**king Bot!",
-        "This is your man the Triggered Bot!"        
+        "'Sup monica!"
+    ],
+    "joke": [
+        "Look in the mirror."
+    ],
+    "unknown": [
+        "I no understand. Blame Jiaping and Luke for doing a shitty job.",
+        "Surri, I only understand Inglesh."
     ]
 }

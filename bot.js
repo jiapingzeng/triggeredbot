@@ -2,23 +2,23 @@ const response = require('./response.json')
 
 module.exports = {
     respond: function(message) {
+        // TO-DO: improve this ghetto logic
         switch (message.toLowerCase()) {
             case 'hi':
             case 'hello':
             case 'hey':
-            case 'whats up':
-            case 'whazzup':
             case 'yo':
             case 'sup':
-            case 'whats cracking?':
-            
-                return randomMessage(response.welcome);
+                return randomMessage(response.greeting)
+            case 'joke':
+            case 'tell me a joke':
+                return randomMessage(response.joke)
             default:
-                return 'I no understand "' + message + '". Blame Jiaping and Luke for doing such a shitty job.'
+                return randomMessage(response.unknown)
         }
     }
 }
 
 function randomMessage(messages) {
-    return messages[Math.floor(Math.random() * messages.length)];
+    return messages[Math.floor(Math.random() * messages.length)]
 }
