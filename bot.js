@@ -8,7 +8,7 @@ module.exports = {
             case 'hey':
                 return randomMessage(response.welcome);
             default:
-                return message
+                return 'I no understand "' + message + '". Blame Jiaping for doing such a shitty job.'
         }
     }
 }
