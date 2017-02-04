@@ -6,6 +6,9 @@ module.exports = {
             case 'hi':
             case 'hello':
             case 'hey':
+            case 'whats up':
+            case 'whazzup':
+            case 'yo':
                 return randomMessage(response.welcome);
             default:
                 return 'I no understand "' + message + '". Blame Jiaping for doing such a shitty job.'
