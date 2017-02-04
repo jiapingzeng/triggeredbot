@@ -11,7 +11,7 @@ module.exports = {
             case 'yo':
                 return randomMessage(response.welcome);
             default:
-                return 'I no understand "' + message + '". Blame Jiaping for doing such a shitty job.'
+                return 'I no understand "' + message + '". Blame Jiaping and Luke for doing such a shitty job.'
         }
     }
 }
