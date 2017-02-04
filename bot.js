@@ -9,6 +9,9 @@ module.exports = {
             case 'whats up':
             case 'whazzup':
             case 'yo':
+            case 'sup':
+            case 'whats cracking?':
+            
                 return randomMessage(response.welcome);
             default:
                 return 'I no understand "' + message + '". Blame Jiaping and Luke for doing such a shitty job.'
