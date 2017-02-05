@@ -1,11 +1,7 @@
 {
   "name": "triggeredbot",
   "private": true,
-  "version": "0.1.1",
-  "description": "",
-  "engines": {
-    "node": "6.x"
-  },
+  "version": "0.2.1",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.16.0",
@@ -17,9 +13,14 @@
     "publish": "npm install",
     "start": "node server.js"
   },
-  "author": {
-    "name": "jiapingzeng",
-    "email": "jiaping@gisar.me"
+  "author": "jiapingzeng <jiaping@gisar.me>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiapingzeng/triggeredbot.git"
   },
-  "license": "ISC"
+  "bugs": {
+    "url": "https://github.com/jiapingzeng/triggeredbot/issues"
+  },
+  "description": ""
 }

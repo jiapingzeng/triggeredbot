@@ -4,7 +4,8 @@ module.exports = {
     respond: function(message) {
         // TO-DO: improve this ghetto logic
         switch (message.toLowerCase()) {
-            case "insult":
+            case "insult me":
+            case "idiot":
                 return randomMessage(response.insult)
             case 'hi':
             case 'hello':
