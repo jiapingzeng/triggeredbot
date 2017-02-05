@@ -61,13 +61,13 @@ function receivedMessage(event) {
 
 function sendTextMessage(recipientId, messageText) {
     var messageData = {
-        recipient: {
-            id: recipientId
+        "recipient": {
+            "id": recipientId
         },
-        message: {
-            text: messageText
+        "message": {
+            "text": messageText
         },
-        sender_action: "typing_on"
+        "sender_action": "typing_on"
     }
     //console.log('sending "' + messageText + '"')
     callSendAPI(messageData)
