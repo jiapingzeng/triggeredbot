@@ -55,7 +55,7 @@ function receivedMessage(event) {
     if (messageText) {
         sendTextMessage(senderId, bot.respond(messageText))
     } else if (messageAttachments) {
-        sendTextMessage(senderId, 'WTF is this?')
+        sendTextMessage(senderId, 'Attachment received')
     }
 }
 
@@ -68,7 +68,7 @@ function sendTextMessage(recipientId, messageText) {
             text: messageText
         }
     }
-    console.log('sending "' + messageText + '"')
+    //console.log('sending "' + messageText + '"')
     callSendAPI(messageData)
 }
 
