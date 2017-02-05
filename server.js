@@ -55,7 +55,7 @@ function receivedMessage(event) {
     if (messageText) {
         sendTextMessage(senderId, bot.respond(messageText))
     } else if (messageAttachments) {
-        sendTextMessage(senderId, 'Attachment received')
+        sendTextMessage(senderId, 'WTF is this?')
     }
 }
 
