@@ -1,18 +1,18 @@
 {
     "insult": [
-        "It's better to let someone think you are an idiot than to open your mouth and prove it.",
+        "It's better to let someone think you are an idiot than to open your mouth and prove it."/*,
         "I'd like to see things from your point of view but I can't seem to get my head that far up my ass.",
         "If laughter is the best medicine, your face must be curing the world.",
-        "I'm jealous of all the people that haven't met you!"
+        "I'm jealous of all the people that haven't met you!"*/
     ],
     "greeting": [
-        "Hello! My name is Trigg EredBot. I'm currently tilted.",
+        "Hello! My name is Trigg EredBot. I'm currently tilted."/*,
         "Hey there!",
         "Yo!",
         "'Sup monica!",
         "New phone. Who dis?",
         "Yo, yo, yo... It's yo dog da Trigg F**king EredBot!",
-        "This is your man the Triggered Bot!"
+        "This is your man the Triggered Bot!"*/
     ],
     "joke": [
         "I'm talking to one right now!",
@@ -20,8 +20,8 @@
     ],
     "unknown": [
         "I no understand. Blame Jiaping and Luke for doing a shitty job.",
-        "Surri, I only understand Inglesh.",
+        "Surri, I only understand Inglesh."/*,
         "Hm. I wasn't paying attention.",
-        "K."
+        "K."*/
     ]
 }

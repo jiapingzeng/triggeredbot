@@ -23,5 +23,7 @@ module.exports = {
 }
 
 function randomMessage(messages) {
-    return messages[Math.floor(Math.random() * messages.length)]
+    if (messages) {
+        return messages[Math.floor(Math.random() * messages.length)]
+    }
 }
