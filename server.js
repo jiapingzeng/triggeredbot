@@ -70,7 +70,7 @@ function sendTextMessage(recipientId, messageText) {
     }
     // console.log('sending "' + messageText + '"')
     // callSendAPI(senderAction)
-    callSendAPI(messageData), 0
+    callSendAPI(messageData)
 }
 
 function callSendAPI(messageData) {
