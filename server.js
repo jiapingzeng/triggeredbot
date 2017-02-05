@@ -61,12 +61,9 @@ function receivedMessage(event) {
 
 function sendTextMessage(recipientId, messageText) {
     var messageData = {
-        "recipient": {
-            "id": recipientId
-        },
-        "message": {
-            "text": messageText
-        }
+        "recipient": { "id": recipientId },
+        "message": { "text": messageText },
+        "sender_action": "mark_seen"
     }
     //console.log('sending "' + messageText + '"')
     callSendAPI(messageData)
