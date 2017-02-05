@@ -66,7 +66,8 @@ function sendTextMessage(recipientId, messageText) {
         },
         message: {
             text: messageText
-        }
+        },
+        sender_action: "typing_on"
     }
     //console.log('sending "' + messageText + '"')
     callSendAPI(messageData)
