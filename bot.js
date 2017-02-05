@@ -7,22 +7,22 @@ module.exports = {
             case "insult":
             case "insult me":
             case "idiot":
-                return randomMessage(response.insult)
+                return randomMessage(response.insult);
             case 'hi':
             case 'hello':
             case 'hey':
             case 'yo':
             case 'sup':
-                return randomMessage(response.greeting)
+                return randomMessage(response.greeting);
             case 'joke':
             case 'tell me a joke':
-                return randomMessage(response.joke)
+                return randomMessage(response.joke);
             default:
-                return randomMessage(response.unknown)
+                return randomMessage(response.unknown);
         }
     }
 }
 
 function randomMessage(messages) {
-    return messages[Math.floor(Math.random() * messages.length)]
+    return messages[Math.floor(Math.random() * messages.length)];
 }
