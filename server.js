@@ -60,17 +60,17 @@ function receivedMessage(event) {
 }
 
 function sendTextMessage(recipientId, messageText) {
-    var senderAction = {
-        "recipient": { "id": recipientId },
-        "sender_action": "typing_on"
-    }    
+    // var senderAction = {
+    //     "recipient": { "id": recipientId },
+    //     "sender_action": "typing_on"
+    // }    
     var messageData = {
         "recipient": { "id": recipientId },
         "message": { "text": messageText }
     }
-    //console.log('sending "' + messageText + '"')
-    setTimeout(callSendAPI(messageData), 0)
-    callSendAPI(senderAction)
+    // console.log('sending "' + messageText + '"')
+    // callSendAPI(senderAction)
+    callSendAPI(messageData), 0
 }
 
 function callSendAPI(messageData) {
