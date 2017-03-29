@@ -1,0 +1,48 @@
+{
+    "insult": {
+        "triggers": [
+            "insult",
+            "insult me"
+        ],
+        "responses": [
+            "I'd like to see things from your point of view but I can't seem to get my head that far up my ass.",
+            "If laughter is the best medicine, your face must be curing the world.",
+            "I'm jealous of all the people that haven't met you!"
+        ]
+    },
+    "greeting": {
+        "triggers": [
+            "hi",
+            "hello",
+            "hey"
+        ],
+        "responses": [
+            "Hello! My name is Trigg EredBot. I'm currently tilted.",
+            "Hey there!",
+            "Yo!",
+            "'Sup Monica!",
+            "New phone. Who dis?",
+            "Yo, yo, yo... It's yo dog da Trigg F**king EredBot!",
+            "This is your man the Triggered Bot!"
+        ]
+    },
+    "joke": {
+        "triggers": [
+            "joke",
+            "tell me a joke"
+        ],
+        "responses": [
+            "I'm talking to one right now!",
+            "Look in the mirror."
+        ]
+    },
+    "unknown": {
+        "triggers": [],
+        "responses": [
+            "I understand not. Blame my stupid developers.",
+            "Surri, I only understand Inglesh.",
+            "So. You're talking to me?",
+            "K."
+        ]
+    }
+}
