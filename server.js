@@ -10,30 +10,28 @@ const log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'w'})
 const log_stdout = process.stdout
 
 console.log = function(d) {
-  var date = new Date(Date.now());
+  var date = new Date(Date.now())
   log_file.write(date.toTimeString() + ": " + util.format(d) + '\n---\n')
   log_stdout.write(util.format(d) + '\n')
 }
 
 const bot = require('./bot.js')
-
 const app = express()
 const port = process.env.PORT || 3000
 
 const APP_SECRET = (process.env.MESSENGER_APP_SECRET) ? process.env.MESSENGER_APP_SECRET : config.get('appSecret')
-
 const VALIDATION_TOKEN = (process.env.MESSENGER_VALIDATION_TOKEN) ? (process.env.MESSENGER_VALIDATION_TOKEN) : config.get('validationToken')
-
 const PAGE_ACCESS_TOKEN = (process.env.MESSENGER_PAGE_ACCESS_TOKEN) ? (process.env.MESSENGER_PAGE_ACCESS_TOKEN) : config.get('pageAccessToken')
-
 const SERVER_URL = (process.env.SERVER_URL) ? (process.env.SERVER_URL) : config.get('serverURL')
 
 if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
-  console.error('Shit\'s on fire yo');
-  process.exit(1);
+  console.error('Shit\'s on fire yo')
+  process.exit(1)
 }
 
 app.listen(port)
+
+console.log('Server started')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -43,7 +41,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/debug', function (req, res) {
-    res.sendFile(path.join(__dirname, '/debug.log'));
+    res.sendFile(path.join(__dirname, '/debug.log'))
 })
 
 app.get('/webhook', function (req, res) {
@@ -102,7 +100,8 @@ function sendTextMessage(recipientId, messageText) {
     }
     console.log('sending "' + messageText + '" to user ' + recipientId)
     // callSendAPI(senderAction)
-    callSendAPI(messageData)
+    // callSendAPI(messageData)
+    console.log(messageData.message)
 }
 
 function callSendAPI(messageData) {
