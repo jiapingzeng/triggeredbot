@@ -2,6 +2,7 @@ var knowledge = require('./knowledge')
 
 var bot = {
   respond: function(message) {
+    message = message.toLowerCase()
     var response = randomMessage(knowledge.unknown.responses)
     forEach(knowledge, function(type, next) {
         var triggers = type.triggers
