@@ -1,8 +1,7 @@
 {
     "insult": {
         "triggers": [
-            "insult",
-            "insult me"
+            "insult"
         ],
         "responses": [
             "I'd like to see things from your point of view but I can't seem to get my head that far up my ass.",
@@ -20,7 +19,7 @@
             "Hello! My name is Trigg EredBot. I'm currently tilted.",
             "Hey there!",
             "Yo!",
-            "'Sup Monica!",
+            "'Sup muh n****!",
             "New phone. Who dis?",
             "Yo, yo, yo... It's yo dog da Trigg F**king EredBot!",
             "This is your man the Triggered Bot!"
@@ -28,8 +27,7 @@
     },
     "joke": {
         "triggers": [
-            "joke",
-            "tell me a joke"
+            "joke"
         ],
         "responses": [
             "I'm talking to one right now!",
@@ -41,7 +39,7 @@
         "responses": [
             "I understand not. Blame my stupid developers.",
             "Surri, I only understand Inglesh.",
-            "So. You're talking to me?",
+            "Wat",
             "K."
         ]
     }
