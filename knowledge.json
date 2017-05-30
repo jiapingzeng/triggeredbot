@@ -1,14 +1,4 @@
 {
-    "insult": {
-        "triggers": [
-            "insult"
-        ],
-        "responses": [
-            "I'd like to see things from your point of view but I can't seem to get my head that far up my ass.",
-            "If laughter is the best medicine, your face must be curing the world.",
-            "I'm jealous of all the people that haven't met you!"
-        ]
-    },
     "greeting": {
         "triggers": [
             "hi",
