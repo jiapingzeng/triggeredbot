@@ -24,6 +24,21 @@
             "Look in the mirror."
         ]
     },
+	"dance": {
+		"triggers": [
+			"homecoming",
+			"homecomong",
+			"hongcomong",
+			"hongcoming",
+			"prom",
+			"dance",
+			"prong"
+		],
+		"responses": [
+			"Sorry, I'm taken by my lover, Tilt EdBot.",
+			"Sorry, I don't go with people less robotic than me."
+		]
+	}
     "unknown": {
         "triggers": [],
         "responses": [
