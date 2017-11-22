@@ -1,19 +1,43 @@
 var knowledge = require('./knowledge')
-
 var superKnowledge = {
-	"oops": [
-		"Don't worry, everything I do is a mistake.",
-		"Whoopsie daisies!"
-	]
+	"oops":
+	{
+		"triggers": [
+			"oops",
+			"whoops"
+		],
+		"responses": [
+			"Don't worry, everything I do is a mistake.",
+			"Whoopsie daisies!"
+		]
+	}
+	"copycat":
+	{
+		"triggers": [
+			"k.",
+			"look in the mirror."
+		],
+		"responses": [
+			"Are you trying to copy me?!",
+			"Try again, copycat."
+		]
+	}
 }
 
 var bot = {
   respond: function(message) {
     message = message.toLowerCase()
-	var response = randomMessage(superKnowledge[message])
-	if (randomMessage) {
-		return randomMessage
-	}
+    forEach(superKnowledge, function(type, next) {
+        var triggers = type.triggers
+        for (var i = 0; i < triggers.length; i++) {
+            var trigger = triggers[i]
+            if (message == trigger) {
+                console.log(trigger)
+                return randomMessage(type.responses)
+            }
+        }
+        next()
+    })
     var response = randomMessage(knowledge.unknown.responses)
     forEach(knowledge, function(type, next) {
         var triggers = type.triggers
