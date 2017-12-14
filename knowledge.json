@@ -48,5 +48,28 @@
             "K.",
 			"No, u!"
         ]
-    }
+    },
+	"gay": {
+		"triggers": [
+			"fagot",
+			"fag",
+			"faggot",
+		],
+		"responses": [
+			"fagot (n): a bundle of sticks, twigs, or branches bound together and used as fuel, a fascine, a torch, etc."
+		]
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
