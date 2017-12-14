@@ -10,7 +10,7 @@ var superKnowledge = {
 			"Don't worry, everything I do is a mistake.",
 			"Whoopsie daisies!"
 		]
-	}
+	},
 	"copycat":
 	{
 		"triggers": [
